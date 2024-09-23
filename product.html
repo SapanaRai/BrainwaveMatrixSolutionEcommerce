@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Commerce Store</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar */
+        header {
+            background-color: #333;
+            padding: 15px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            background-color: #ff6347;
+            border-radius: 5px;
+        }
+
+        /* Products Section */
+        .products-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .products-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .buy-btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Cart Section */
+        .cart-section {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            width: 300px;
+            height: 100%;
+            box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .cart-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cart-items {
+            list-style: none;
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-footer {
+            margin-top: 20px;
+        }
+
+        .cart-footer button {
+            width: 100%;
+            background-color: #ff6347;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .close-cart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products-section">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-product-id="1" data-product-name="Product 1" data-product-price="19.99">
+                <img src="image/brds.jpg" alt="Product 1">
+                <h3>Product Name 1</h3>
+                <p>$19.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-product-id="2" data-product-name="Product 2" data-product-price="29.99">
+                <img src="image/prd.jpeg" alt="Product 2">
+                <h3>Product Name 2</h3>
+                <p>$29.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-product-id="3" data-product-name="Product 3" data-product-price="39.99">
+                <img src="image/product.jpg" alt="Product 3">
+                <h3>Product Name 3</h3>
+                <p>$39.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-product-id="4" data-product-name="Product 4" data-product-price="49.99">
+                <img src="image/prods.jpg" alt="Product 4">
+                <h3>Product Name 4</h3>
+                <p>$49.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <section class="cart-section" id="cart-section">
+        <button class="close-cart" onclick="toggleCart()">✖</button>
+        <h3 class="cart-title">Shopping Cart</h3>
+        <ul class="cart-items" id="cart-items"></ul>
+        <div class="cart-footer">
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website</p>
+    </footer>
+
+    <script>
+        // Cart Array to Store Products
+        let cart = [];
+
+        // Function to Add Product to Cart
+        function addToCart(button) {
+            const productCard = button.closest('.product-card');
+            const productName = productCard.getAttribute('data-product-name');
+            const productPrice = productCard.getAttribute('data-product-price');
+
+            cart.push({
+                name: productName,
+                price: parseFloat(productPrice)
+            });
+
+            updateCart();
+            toggleCart();
+        }
+
+        // Function to Update Cart
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = ''; // Clear previous items
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'cart-item';
+                li.innerHTML = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItems.appendChild(li);
+            });
+        }
+
+        // Function to Toggle Cart Visibility
+        function toggleCart() {
+            const cartSection = document.getElementById('cart-section');
+            cartSection.style.display = cartSection.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Function to Simulate Checkout
+        function checkout() {
+            alert('Checkout successful!');
+            cart = []; // Clear the cart after checkout
+            updateCart();
+            toggleCart();
+        }
+    </script>
+</body>
+</html>
