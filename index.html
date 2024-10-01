@@ -1,62 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Store</title>
+    <title>Foodmandu Clone</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
-        <h1>Online Shop</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <h1>Foodstar</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="product-list">
-        <h2>Products</h2>
-        <div class="products">
-            <div class="product">
-                <img src="image/food.jpg" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>$10</p>
-                <button class="add-to-cart" data-name="Product 1" data-price="10">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="image/goods.jpeg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>$20</p>
-                <button class="add-to-cart" data-name="Product 2" data-price="20">Add to Cart</button>
-            </div>
-
-            <div class="product">
-                <img src="image/imgs.jpeg" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>$15</p>
-                <button class="add-to-cart" data-name="Product 3" data-price="15">Add to Cart</button>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="search-container">
+            <h2>Your order food from the widest range of our restaurants.</h2>
+            <input type="text" placeholder="Restaurant or Cuisine (leave it blank to browse all)">
+            <button>Find Restaurants</button>
         </div>
     </section>
 
-    <section id="cart">
-        <h2>Cart</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: $<span id="cart-total">0</span></p>
-        <button id="checkout">Checkout</button>
+   <!-- Food Menu Section -->
+<section class="foodmenu">
+    <div class="foodmenu-container">
+        <h2>Our Food Menu</h2>
+        <div class="foodmenu-content">
+            <img src="./image/menu.jpg" alt="Delicious food">
+            <div class="foodmenu-text">
+                <p>Explore our diverse range of mouth-watering dishes, handpicked from the finest restaurants. Whether you're craving a hearty meal or a light snack, we have something to satisfy every taste bud!</p>
+                <p>Enjoy the convenience of having your favorite meals delivered straight to your doorstep.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Foodstar is the fastest, easiest and most convenient way to enjoy the best food of your favourite restaurants at home, at the office or wherever you want to.</p>
+            <p>We know that your time is valuable and sometimes every minute in the day counts. That’s why we deliver! So you can spend more time doing the things you love.</p>
+            <a href="about.html" class="learn-more">LEARN MORE</a>
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <section class="main">
+        <div class="contain">
+            <!-- You can add more content here in the future -->
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 E-Commerce Website</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+        <div class="footer-container">
+          <div class="footer-column">
+            <b>WE'RE FOODSTAR</b>
+            <p>About us</p>
+            <p>Available Area</p>
+            <p>Delivery Charges</p>
+            <p>Blog</p>
+          </div>
+      
+          <div class="footer-column">
+            <b>CALL US</b>
+            <p>Chabahil: 2356987, 7823457, 1223872, 4523980</p>
+            <p>Pokhara: 9823436709, 9823486067</p>
+          </div>
+      
+          <div class="footer-column">
+            <p>&copy; 2024 Foodstar Clone</p>
+          </div>
+        </div>
+      </footer>
+      
 </body>
+
 </html>
