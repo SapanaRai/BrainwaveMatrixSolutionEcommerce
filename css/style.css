@@ -177,9 +177,26 @@ nav ul li a {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #f4f4f4; /* Optional styling */
     padding: 20px;
-    text-align: center;
-    margin-top: 50px;
-}
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-column b {
+    font-size: 1.2em;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  

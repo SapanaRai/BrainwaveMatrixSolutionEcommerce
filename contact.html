@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - E-Commerce Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Reset */
         * {
@@ -129,17 +130,31 @@
 
         /* Footer Styles */
         footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        footer p {
-            font-size: 1rem;
-            margin: 0;
-        }
+    background-color: #f4f4f4; /* Optional styling */
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-column b {
+    font-size: 1.2em;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
     </style>
 </head>
 <body>
@@ -161,9 +176,9 @@
             <p><strong>Phone:</strong> +1 800 123 4567</p>
             <p><strong>Address:</strong> 123 E-Commerce Street, Business City, EC 12345</p>
             <div class="social-links">
-                <a href="#">&#x1F426; Twitter</a>
-                <a href="#">&#x1F345; Facebook</a>
-                <a href="#">&#x1F987; Instagram</a>
+                <a href="http://www.twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="http://www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="http://www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
         </div>
 
@@ -180,7 +195,25 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 E-Commerce Website</p>
-    </footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <b>WE'RE FOODSTAR</b>
+            <p>About us</p>
+            <p>Available Area</p>
+            <p>Delivery Charges</p>
+            <p>Blog</p>
+          </div>
+      
+          <div class="footer-column">
+            <b>CALL US</b>
+            <p>Chabahil: 2356987, 7823457, 1223872, 4523980</p>
+            <p>Pokhara: 9823436709, 9823486067</p>
+          </div>
+      
+          <div class="footer-column">
+            <p>&copy; 2024 Foodstar Clone</p>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

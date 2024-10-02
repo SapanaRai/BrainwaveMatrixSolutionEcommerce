@@ -143,9 +143,30 @@
             justify-content: space-between;
         }
 
-        .cart-footer {
-            margin-top: 20px;
-        }
+    footer {
+    background-color: #333;
+    color: aliceblue;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-column b {
+    font-size: 1.2em;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
 
         .cart-footer button {
             width: 100%;
@@ -182,10 +203,50 @@
     <section class="products-section">
         <h2>Our Products</h2>
         <div class="product-grid">
+             <!-- Product 1 -->
+             <div class="product-card" data-product-id="1" data-product-name="Product 1" data-product-price="19.99">
+                <img src="image/cake.jpg" alt="Product 1">
+                <h3>Chocklete Cake</h3>
+                <p>$19.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-product-id="2" data-product-name="Product 2" data-product-price="29.99">
+                <img src="image/cakes.webp" alt="Product 2">
+                <h3>Cake</h3>
+                <p>$29.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-product-id="3" data-product-name="Product 3" data-product-price="39.99">
+                <img src="image/momo.jpeg" alt="Product 3">
+                <h3>Momo</h3>
+                <p>$39.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+             <!-- Product 3 -->
+             <div class="product-card" data-product-id="3" data-product-name="Product 3" data-product-price="39.99">
+                <img src="image/on.jpg" alt="Product 3">
+                <h3>Chicken</h3>
+                <p>$39.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+             <!-- Product 3 -->
+             <div class="product-card" data-product-id="3" data-product-name="Product 3" data-product-price="39.99">
+                <img src="image/ping.jpg" alt="Product 3">
+                <h3>Nasta</h3>
+                <p>$39.99</p>
+                <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
             <!-- Product 1 -->
             <div class="product-card" data-product-id="1" data-product-name="Product 1" data-product-price="19.99">
                 <img src="image/brds.jpg" alt="Product 1">
-                <h3>Product Name 1</h3>
+                <h3>Choco Pie</h3>
                 <p>$19.99</p>
                 <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
             </div>
@@ -193,7 +254,7 @@
             <!-- Product 2 -->
             <div class="product-card" data-product-id="2" data-product-name="Product 2" data-product-price="29.99">
                 <img src="image/prd.jpeg" alt="Product 2">
-                <h3>Product Name 2</h3>
+                <h3> Veggie Burgers</h3>
                 <p>$29.99</p>
                 <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
             </div>
@@ -201,7 +262,7 @@
             <!-- Product 3 -->
             <div class="product-card" data-product-id="3" data-product-name="Product 3" data-product-price="39.99">
                 <img src="image/product.jpg" alt="Product 3">
-                <h3>Product Name 3</h3>
+                <h3>Veggie Burger</h3>
                 <p>$39.99</p>
                 <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
             </div>
@@ -209,7 +270,7 @@
             <!-- Product 4 -->
             <div class="product-card" data-product-id="4" data-product-name="Product 4" data-product-price="49.99">
                 <img src="image/prods.jpg" alt="Product 4">
-                <h3>Product Name 4</h3>
+                <h3>Cheese</h3>
                 <p>$49.99</p>
                 <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
             </div>
@@ -226,8 +287,27 @@
         </div>
     </section>
 
+    
     <footer>
-        <p>&copy; 2024 E-Commerce Website</p>
+        <div class="footer-container">
+          <div class="footer-column">
+            <b>WE'RE FOODSTAR</b>
+            <p>About us</p>
+            <p>Available Area</p>
+            <p>Delivery Charges</p>
+            <p>Blog</p>
+          </div>
+      
+          <div class="footer-column">
+            <b>CALL US</b>
+            <p>Chabahil: 2356987, 7823457, 1223872, 4523980</p>
+            <p>Pokhara: 9823436709, 9823486067</p>
+          </div>
+      
+          <div class="footer-column">
+            <p>&copy; 2024 Foodstar Clone</p>
+          </div>
+        </div>
     </footer>
 
     <script>

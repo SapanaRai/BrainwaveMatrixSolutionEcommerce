@@ -103,18 +103,37 @@
         }
 
         /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
+       
+.foodmenu-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
 
-        footer p {
-            font-size: 1rem;
-            margin: 0;
-        }
+footer {
+    background-color: #333;
+    color: aliceblue;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-column b {
+    font-size: 1.2em;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
     </style>
 </head>
 <body>
@@ -150,7 +169,25 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 E-Commerce Website</p>
+        <div class="footer-container">
+          <div class="footer-column">
+            <b>WE'RE FOODSTAR</b>
+            <p>About us</p>
+            <p>Available Area</p>
+            <p>Delivery Charges</p>
+            <p>Blog</p>
+          </div>
+      
+          <div class="footer-column">
+            <b>CALL US</b>
+            <p>Chabahil: 2356987, 7823457, 1223872, 4523980</p>
+            <p>Pokhara: 9823436709, 9823486067</p>
+          </div>
+      
+          <div class="footer-column">
+            <p>&copy; 2024 Foodstar Clone</p>
+          </div>
+        </div>
     </footer>
 </body>
 </html>
